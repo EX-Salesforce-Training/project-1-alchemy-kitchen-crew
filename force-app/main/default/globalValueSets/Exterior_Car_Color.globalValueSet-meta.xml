@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Solid Black</fullName>
+        <default>false</default>
+        <label>Solid Black</label>
+    </customValue>
+    <customValue>
+        <fullName>Deep Blue Metallic</fullName>
+        <default>false</default>
+        <label>Deep Blue Metallic</label>
+    </customValue>
+    <customValue>
+        <fullName>Red Multi-Coat</fullName>
+        <default>false</default>
+        <label>Red Multi-Coat</label>
+    </customValue>
+    <customValue>
+        <fullName>Midnight Silver Metallic</fullName>
+        <default>false</default>
+        <label>Midnight Silver Metallic</label>
+    </customValue>
+    <customValue>
+        <fullName>Pearl White Multi-Coat</fullName>
+        <default>false</default>
+        <label>Pearl White Multi-Coat</label>
+    </customValue>
+    <masterLabel>Exterior Car Color</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Black with Premium Seat Trim(Black)</fullName>
+        <default>false</default>
+        <label>Black with Premium Seat Trim(Black)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cream with Premium Seat Trim(Beige)</fullName>
+        <default>false</default>
+        <label>Cream with Premium Seat Trim(Beige)</label>
+    </customValue>
+    <customValue>
+        <fullName>White/Black with Premium Seat Trim(White)</fullName>
+        <default>false</default>
+        <label>White/Black with Premium Seat Trim(White)</label>
+    </customValue>
+    <masterLabel>Interior Colors</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
