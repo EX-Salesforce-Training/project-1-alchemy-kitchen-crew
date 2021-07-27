@@ -262,6 +262,9 @@
         <layout>SessionHijackingEventStore-Session Hijacking Event Store Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Test_Tube__c-Test Tube Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Test__c-Test Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
