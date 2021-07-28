@@ -3,76 +3,6 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Car__c.Contact__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Custom_Car_Color__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Dealership__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Doors__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Engine__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Exterior_Color__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Interior_Color__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Mileage__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Range_EPA_miles__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Top_Speed_mph__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Vin_Number__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.X0_60_Time_s__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Car__c.Year__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Dealership__c.City__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -150,17 +80,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>AuthorizationFormText-Authorization Form Text Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Car__c-Car Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Car__c-Car Layout</layout>
-        <recordType>Car__c.Customer_Owned</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Car__c-Car Layout</layout>
-        <recordType>Car__c.Dealer_Owned</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CardPaymentMethod-Card Payment Method Layout</layout>
@@ -273,16 +192,6 @@
     <layoutAssignments>
         <layout>WorkOrderLineItem-Work Order Line Item Layout</layout>
     </layoutAssignments>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Car__c.Customer_Owned</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>Car__c.Dealer_Owned</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
