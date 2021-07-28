@@ -84,11 +84,19 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Car__c.Dealership__c</relatedList>
+        <relatedList>Employee__c.Dealership__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Employee__c.Dealership__c</relatedList>
+        <fields>PRODUCT2.NAME</fields>
+        <fields>PRODUCT2.CUSTOMER_PRODUCT_ID</fields>
+        <fields>PRODUCT2.DESCRIPTION</fields>
+        <relatedList>Product2.Dealership__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>OPPORTUNITY.NAME</fields>
+        <fields>ACCOUNT.NAME</fields>
+        <fields>OPPORTUNITY.CLOSE_DATE</fields>
+        <relatedList>Opportunity.Dealership__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
