@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Service Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Service_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>State_Inspection</fullName>
+                <default>false</default>
+                <label>State Inspection</label>
+            </value>
+            <value>
+                <fullName>Battery Test</fullName>
+                <default>false</default>
+                <label>Battery Test</label>
+            </value>
+            <value>
+                <fullName>Air_Filter_Replacement</fullName>
+                <default>false</default>
+                <label>Air Filter Replacement</label>
+            </value>
+            <value>
+                <fullName>Tire_Rotation_and_Balance</fullName>
+                <default>false</default>
+                <label>Tire Rotation and Balance</label>
+            </value>
+            <value>
+                <fullName>Performance Level 1</fullName>
+                <default>false</default>
+                <label>Performance Level 1</label>
+            </value>
+            <value>
+                <fullName>Performance Level 2</fullName>
+                <default>false</default>
+                <label>Performance Level 2</label>
+            </value>
+            <value>
+                <fullName>Performance Level 3</fullName>
+                <default>false</default>
+                <label>Performance Level 3</label>
+            </value>
+            <value>
+                <fullName>Brake Fluid Test</fullName>
+                <default>false</default>
+                <label>Brake Fluid Test</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Battery Test</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Air_Filter_Replacement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Tire_Rotation_and_Balance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Brake Fluid Test</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inspection</controllingFieldValue>
+            <valueName>State_Inspection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upgrade</controllingFieldValue>
+            <valueName>Performance Level 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upgrade</controllingFieldValue>
+            <valueName>Performance Level 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upgrade</controllingFieldValue>
+            <valueName>Performance Level 3</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

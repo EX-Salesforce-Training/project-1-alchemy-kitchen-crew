@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Car_Service</fullName>
+    <active>true</active>
+    <label>Car Service</label>
+    <picklistValues>
+        <picklist>Add_ons__c</picklist>
+        <values>
+            <fullName>Advance Parking Sensors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automatic Suspension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autopilot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTA Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Streaming Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exterior_Color__c</picklist>
+        <values>
+            <fullName>Deep Blue Metallic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midnight Silver Metallic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pearl White Multi-Coat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red Multi-Coat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solid Black</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Family</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interior_Color__c</picklist>
+        <values>
+            <fullName>Black with Premium Seat Trim%28Black%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cream with Premium Seat Trim%28Beige%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White%2FBlack with Premium Seat Trim%28White%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Model__c</picklist>
+        <values>
+            <fullName>CyberTruck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Model 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Model S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Model T</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Model X</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Model Y</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roadster</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QuantityUnitOfMeasure</picklist>
+        <values>
+            <fullName>Each</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_Category__c</picklist>
+        <values>
+            <fullName>Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_Type__c</picklist>
+        <values>
+            <fullName>Air_Filter_Replacement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Battery Test</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brake Fluid Test</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance Level 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance Level 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance Level 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>State_Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tire_Rotation_and_Balance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Year__c</picklist>
+        <values>
+            <fullName>2012</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2013</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2014</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2021</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
