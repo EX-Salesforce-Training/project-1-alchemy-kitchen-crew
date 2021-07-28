@@ -13,10 +13,10 @@
         <name>CustomObject</name>
     </types>
     <types>
-    <types>
         <members>*</members>
         <name>Layout</name>
     </types>
+    <types>
         <members>*</members>
         <name>Report</name>
     </types>
@@ -35,6 +35,38 @@
     <types>
         <members>*</members>
         <name>DashboardFolder</name>
+    </types>
+       <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTestSuite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
     </types>
     <version>52.0</version>
 </Package>
