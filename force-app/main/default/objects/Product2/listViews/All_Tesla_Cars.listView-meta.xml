@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Tesla_Cars</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>Dealership__c</columns>
+    <columns>Exterior_Color__c</columns>
+    <columns>Interior_Color__c</columns>
+    <columns>Model__c</columns>
+    <columns>Year__c</columns>
+    <columns>VIN__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Customer_Vehicle__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Model__c</field>
+        <operation>equals</operation>
+        <value>Model S,Model 3,Model X,Model Y,Roadster,CyberTruck,Model T</value>
+    </filters>
+    <label>All Tesla Cars</label>
+</ListView>
