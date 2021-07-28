@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Respond to Customers</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <formula>true</formula>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>milanwinter8@gmail.com</replyToEmail>
+            <senderEmail>milanwinter8@gmail.com</senderEmail>
+            <senderName>Milan Winter</senderName>
+            <template>unfiled$public/SupportCaseResponse</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>
