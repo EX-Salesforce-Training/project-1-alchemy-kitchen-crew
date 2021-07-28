@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Model__c</fullName>
+    <externalId>false</externalId>
+    <label>Model</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Model S</fullName>
+                <default>false</default>
+                <label>Model S</label>
+            </value>
+            <value>
+                <fullName>Model 3</fullName>
+                <default>false</default>
+                <label>Model 3</label>
+            </value>
+            <value>
+                <fullName>Model X</fullName>
+                <default>false</default>
+                <label>Model X</label>
+            </value>
+            <value>
+                <fullName>Model Y</fullName>
+                <default>false</default>
+                <label>Model Y</label>
+            </value>
+            <value>
+                <fullName>Roadster</fullName>
+                <default>false</default>
+                <label>Roadster</label>
+            </value>
+            <value>
+                <fullName>CyberTruck</fullName>
+                <default>false</default>
+                <label>CyberTruck</label>
+            </value>
+            <value>
+                <fullName>Model T</fullName>
+                <default>false</default>
+                <label>Model T</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

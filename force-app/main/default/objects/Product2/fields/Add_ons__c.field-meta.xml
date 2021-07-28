@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_ons__c</fullName>
+    <externalId>false</externalId>
+    <label>Add-ons</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Autopilot</fullName>
+                <default>false</default>
+                <label>Autopilot</label>
+            </value>
+            <value>
+                <fullName>Streaming Services</fullName>
+                <default>false</default>
+                <label>Streaming Services</label>
+            </value>
+            <value>
+                <fullName>OTA Updates</fullName>
+                <default>false</default>
+                <label>OTA Updates</label>
+            </value>
+            <value>
+                <fullName>Advance Parking Sensors</fullName>
+                <default>false</default>
+                <label>Advance Parking Sensors</label>
+            </value>
+            <value>
+                <fullName>Automatic Suspension</fullName>
+                <default>false</default>
+                <label>Automatic Suspension</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>
