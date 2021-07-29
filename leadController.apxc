@@ -1,0 +1,28 @@
+public class leadController {
+
+    private final Dealership__c dealership;
+    private final Lead lead;
+    
+    public leadController(){
+        //dealership=[SELECT Name FROM Dealership__c];
+        //lead=[SELECT Name From Lead];
+    }
+    
+    
+    public lead getLead() {
+        return lead;
+    }
+    public Dealership__c getDealerships() {
+        return dealership;
+    }
+    
+    
+    public PageReference save(){
+        insert lead;
+        PageReference reRend = new PageReference('https://google.com/');
+         reRend.setRedirect(true);
+        return reRend;
+    }
+        
+    
+}
