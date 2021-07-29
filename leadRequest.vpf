@@ -1,0 +1,37 @@
+<apex:page controller="leadController">
+<apex:form id="frm" enctype="multipart/form-data">
+    <apex:pageMessages />
+    <apex:pageBlock title="Tesla Lead" id="pg_blk">
+        <apex:pageBlockSection showHeader="false" columns="2" id="block1">
+            
+            <apex:pageBlockSectionItem ><apex:outputLabel >First Name: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="firstName" value="{!lead.FirstName}" required="true"/></apex:pageBlockSectionItem>
+
+            
+            <apex:pageBlockSectionItem ><apex:outputLabel >Last Name: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="lastName" value="{!lead.LastName}" required="true"/></apex:pageBlockSectionItem>
+
+   
+            <apex:pageBlockSectionItem ><apex:outputLabel >Zipcode*: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="Zipcode" value="{!lead.zipCode}" required="true"/></apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem ><apex:outputLabel >Phone*: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="MobilePhone" value="{!lead.phone}" required="true"/></apex:pageBlockSectionItem>
+
+       		<apex:pageBlockSectionItem ><apex:outputLabel >Email: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="Email" value="{!lead.Email}" required="true"/></apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem ><apex:outputLabel >Dealership: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="Email" value="{!lead.Email}" required="true"/></apex:pageBlockSectionItem>
+ 		     <apex:column headerValue="Private?">
+             <apex:inputCheckbox value="{!o.isprivate}"/>
+   	         </apex:column>
+            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                        <apex:commandButton action="{!save}" value="Submit"/>
+                    </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+    </apex:pageBlock>
+</apex:form>
+</apex:page>
