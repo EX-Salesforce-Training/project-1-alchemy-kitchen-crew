@@ -18,6 +18,19 @@
     </types>
     <types>
         <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Custom-HR</members>
+        <members>Custom-Manager</members>
+        <members>Custom-Shop</members>
+        <members>Custom: Sales Profile</members>
+        <members>Custom: Support Profile</members>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>Layout</name>
     </types>
     <types>
@@ -32,6 +45,7 @@
         <members>*</members>
         <name>ReportFolder</name>
     </types>
+    
     <types>
         <members>*</members>
         <name>Dashboard</name>
