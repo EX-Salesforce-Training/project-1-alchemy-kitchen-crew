@@ -21,6 +21,23 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AssignmentRules</name>
+    </types>
+      <types>
+        <members>*</members>
+        <name>AutoResponseRules</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>EscalationRules</name>
+    </types>
+    
+    <types>
         <members>Custom-HR</members>
         <members>Custom-Manager</members>
         <members>Custom-Shop</members>
