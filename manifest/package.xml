@@ -1,52 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Product2</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>Pricebook2</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>PricebookEntry</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>Opportunity</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Layout</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Report</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ReportType</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ReportFolder</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Dashboard</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>DashboardFolder</name>
-    </types>
-       <types>
-        <members>*</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexComponent</name>
+        <members>Custom-HR</members>
+        <members>Custom-Manager</members>
+        <members>Custom-Shop</members>
+        <members>Custom: Sales Profile</members>
+        <members>Custom: Support Profile</members>
+        <members>Admin</members>
+        <name>Profile</name>
     </types>
     <types>
         <members>*</members>
@@ -54,23 +15,11 @@
     </types>
     <types>
         <members>*</members>
-        <name>ApexTestSuite</name>
+        <name>ApexClass</name>
     </types>
     <types>
         <members>*</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>LightningComponentBundle</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>StaticResource</name>
+        <name>Layout</name>
     </types>
     <types>
         <members>*</members>
