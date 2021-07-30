@@ -35,3 +35,45 @@
     </apex:pageBlock>
 </apex:form>
 </apex:page>
+<apex:page standardController="Lead" extensions="leadController">
+<apex:form id="frm" enctype="multipart/form-data">
+    <apex:pageMessages />
+    <apex:pageBlock title="Tesla Lead" id="pg_blk">
+        <apex:pageBlockSection showHeader="false" columns="1" id="block1">
+            
+            <apex:pageBlockSectionItem ><apex:outputLabel >First Name: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="firstName" value="{!lead.FirstName}" required="true"/></apex:pageBlockSectionItem>
+
+            
+            <apex:pageBlockSectionItem ><apex:outputLabel >Last Name: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="lastName" value="{!lead.LastName}" required="true"/></apex:pageBlockSectionItem>
+
+   
+            <apex:pageBlockSectionItem ><apex:outputLabel >Zipcode*: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="Zipcode" value="{!lead.postalCode}" required="true"/></apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem ><apex:outputLabel >Phone*: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="MobilePhone" value="{!lead.phone}" required="true"/></apex:pageBlockSectionItem>
+
+       		<apex:pageBlockSectionItem ><apex:outputLabel >Email: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="Email" value="{!lead.Email}" required="true"/></apex:pageBlockSectionItem>
+			
+            <apex:pageBlockSectionItem ><apex:outputLabel >Select a Dealership</apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:selectList size="1">
+			<apex:selectOptions value="{!DealershipList}" ></apex:selectOptions> 		    
+            </apex:selectList>
+        
+			<apex:pageBlockSectionItem ><apex:outputLabel >Select a Model</apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:selectList size="1">
+			<apex:selectOptions value="{!items}" ></apex:selectOptions> 		    
+            </apex:selectList>       	
+ 	
+            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                        <apex:commandButton action="{!save}" value="Submit"/>
+                    </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+    </apex:pageBlock>
+</apex:form>
+</apex:page>
