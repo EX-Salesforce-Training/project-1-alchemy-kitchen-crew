@@ -26,3 +26,64 @@ public class leadController {
         
     
 }
+public class leadController {
+
+    private final Lead lead;
+
+    public String selectedaccountId { get; set; }
+	public List<Lead>leadTemp=new List<Lead>();
+    
+    
+    public List<SelectOption> getDealershipList()
+   {
+         
+           List<Dealership__c> DealershipList = [select Name,Id from Dealership__c] ;
+           System.debug('Dealerships'+DealershipList.size());
+           List<SelectOption> DealershipOptionList = new List<SelectOption>();
+           DealershipOptionList.add(new SelectOption( ' ' ,'---Select---'));
+           for(Dealership__c dealer : DealershipList )
+           {
+            DealershipOptionList .add(new SelectOption(dealer.Id , dealer.Name));
+           }
+           
+          return DealershipOptionList ;
+       }
+    
+    public List<SelectOption> getCarList(){
+        
+           List<Car__c> CarList = [select Id, Model__c from Car__c] ;
+   
+           List<SelectOption> CarOptionList = new List<SelectOption>();
+           CarOptionList.add(new SelectOption( ' ' ,'---Select---'));
+           for(Car__c car : CarList )
+           {
+            CarOptionList .add(new SelectOption(car.Id , car.Model__c));
+           }
+           
+          return CarOptionList ;
+    }
+      
+      public List<SelectOption> getItems() {
+        List<SelectOption> options = new List<SelectOption>();
+        options.add(new SelectOption('Model S','Model S'));
+        options.add(new SelectOption('Model X','Model X'));
+        options.add(new SelectOption('Model Y','Model Y'));
+        options.add(new SelectOption('Roadster','Roadster'));
+        options.add(new SelectOption('CyberTruck','CyberTruck'));
+  		 options.add(new SelectOption('Model T','Model T'));
+
+        return options;
+    }
+    
+    
+     public leadController(ApexPages.StandardController stdController) {
+        this.lead = (Lead)stdController.getRecord();
+    }
+
+    
+    public lead getLead() {
+        return lead;
+    }
+
+    
+}
