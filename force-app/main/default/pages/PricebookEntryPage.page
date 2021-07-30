@@ -1,0 +1,28 @@
+<!-- 
+*****************"PricebookEntryPage.vfp"***********************
+VisualForce page that displays Price Book information
+for dealership products. Paginated for enhanced user experience.
+****************************************************************
+Author: Evan DeVizio
+Created: 7/29/21
+Last Modified: 7/30/21
+-->
+
+<apex:page standardController="PricebookEntry" extensions="PricebookEntryExtension">
+    <apex:slds />
+    <apex:form >
+    	<apex:pageBlock title="Price Book Entries" id="block">
+            <apex:pageBlockTable value="{!PriceBookEntryList}" var="pbEntry" id="table">
+                <apex:column value="{!pbEntry.Product2Id}" />
+                <apex:column value="{!pbEntry.UnitPrice}" />
+                <apex:column value="{!pbEntry.Pricebook2Id}" />
+            </apex:pageBlockTable>
+		 <apex:pageBlockButtons >
+         	<apex:commandButton action="{!firstPage}" disabled="{!Prev}" value="First" reRender="table,block" styleclass="slds-button slds-button--neutral"/>
+            <apex:commandButton action="{!prevPage}" disabled="{!Prev}" value="Prev" reRender="table,block" styleclass="slds-button slds-button--neutral"/>
+            <apex:commandButton action="{!nextPage}" disabled="{!Next}" value="Next" reRender="table,block" styleclass="slds-button slds-button--neutral"/>
+            <apex:commandButton action="{!lastPage}" disabled="{!Next}" value="Last" reRender="table,block" styleclass="slds-button slds-button--neutral"/> 
+         </apex:pageBlockButtons>
+    	</apex:pageBlock>
+    </apex:form>
+</apex:page>
