@@ -1,27 +1,90 @@
-<!-- 
-*****************"PricebookEntryPage.vfp"***********************
+<!--***********************************************************
+				   PricebookEntryPage.vfp
+***************************************************************
 VisualForce page that displays Price Book information
 for dealership products. Paginated for enhanced user experience.
 ****************************************************************
 Author: Evan DeVizio
 Created: 7/29/21
-Last Modified: 7/30/21
--->
+Last Modified: 8/1/21
+================================================================-->
 
 <apex:page standardController="PricebookEntry" extensions="PricebookEntryExtension">
     <apex:slds />
-    <apex:form >
-    	<apex:pageBlock title="Price Book Entries" id="block">
+    <style type="text/css">
+		.productForm {
+        	color: white;
+   			background-color: darkblue;
+        }
+    	.columnTitle {
+        	text-align: center;
+            font-weight: bold;
+            font-size:16pt;
+            background: #ffffff;
+            width:100%;
+            border:4px solid black;
+            padding:8px;
+            border-radius:8px;
+        }
+        .formHeader {
+        	text-align: center;
+        	font-size: 14pt;
+        	background-color: lightgray;
+        }
+        .slds-button_neutral:hover {
+        	background-color: beige !important;
+        	color: black !important;
+        }
+    </style>
+    <apex:form styleClass="productForm">
+        <h1 style="text-align:center;font-size:3.75rem;font-weight:bold;">
+            Price Book Entries
+        </h1>
+    	<apex:pageBlock id="block" mode="maindetail">
             <apex:pageBlockTable value="{!PriceBookEntryList}" var="pbEntry" id="table">
-                <apex:column value="{!pbEntry.Product2Id}" />
-                <apex:column value="{!pbEntry.UnitPrice}" />
-                <apex:column value="{!pbEntry.Pricebook2Id}" />
+                <!-- Product -->
+                <apex:column value="{!pbEntry.Product2Id}" styleClass="formHeader" style="font-weight: bold;">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByProduct}" styleClass="columnTitle"
+            				reRender="table">Product
+        				</apex:commandLink> 
+                    </apex:facet>
+                </apex:column>
+                <!-- Unit Price -->
+                <apex:column value="{!pbEntry.UnitPrice}" styleClass="formHeader">
+                	<apex:facet name="header">
+                    	<apex:commandLink action="{!sortByPrice}" styleClass="columnTitle"
+            				reRender="table">Unit Price
+        				</apex:commandLink> 
+                    </apex:facet>
+                </apex:column>
+                <!-- Record Type -->
+                <apex:column value="{!pbEntry.Product2.RecordType.Name}" styleClass="formHeader">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!sortByRecordType}" styleClass="columnTitle"
+            				reRender="table">Type
+        				</apex:commandLink> 
+                    </apex:facet>
+                </apex:column>
+                <!-- Price Book -->
+                <apex:column value="{!pbEntry.Pricebook2Id}" styleClass="formHeader">
+                	<apex:facet name="header">
+                    	<apex:commandLink action="{!sortByPriceBook}" styleClass="columnTitle"
+            				reRender="table">Price Book
+        				</apex:commandLink> 
+                    </apex:facet>
+                </apex:column>
             </apex:pageBlockTable>
-		 <apex:pageBlockButtons >
-         	<apex:commandButton action="{!firstPage}" disabled="{!Prev}" value="First" reRender="table,block" styleclass="slds-button slds-button--neutral"/>
-            <apex:commandButton action="{!prevPage}" disabled="{!Prev}" value="Prev" reRender="table,block" styleclass="slds-button slds-button--neutral"/>
-            <apex:commandButton action="{!nextPage}" disabled="{!Next}" value="Next" reRender="table,block" styleclass="slds-button slds-button--neutral"/>
-            <apex:commandButton action="{!lastPage}" disabled="{!Next}" value="Last" reRender="table,block" styleclass="slds-button slds-button--neutral"/> 
+         <!-- Pagination -->
+		 <apex:pageBlockButtons style="font-size: 1.5rem;">
+         	<apex:commandButton action="{!firstPage}" disabled="{!Prev}" value="First" id="btnFirst" 
+                                reRender="table,block" styleclass="slds-button slds-button_neutral slds-button_first"/>
+            <apex:commandButton action="{!prevPage}" disabled="{!Prev}" value="<<" id="btnPrev"
+                                reRender="table,block" styleclass="slds-button slds-button_neutral"/>
+            <apex:commandButton action="{!nextPage}" disabled="{!Next}" value=">>" id="btnNext"
+                                reRender="table,block" styleclass="slds-button slds-button_neutral"/>
+            <apex:commandButton action="{!lastPage}" disabled="{!Next}" value="Last" id="btnLast"
+                                reRender="table,block"  styleclass="slds-button slds-button_neutral slds-button_last"/> 
          </apex:pageBlockButtons>
     	</apex:pageBlock>
     </apex:form>

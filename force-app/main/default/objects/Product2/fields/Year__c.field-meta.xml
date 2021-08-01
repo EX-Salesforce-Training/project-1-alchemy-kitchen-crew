@@ -11,6 +11,11 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
+                <fullName>2022</fullName>
+                <default>false</default>
+                <label>2022</label>
+            </value>
+            <value>
                 <fullName>2021</fullName>
                 <default>false</default>
                 <label>2021</label>

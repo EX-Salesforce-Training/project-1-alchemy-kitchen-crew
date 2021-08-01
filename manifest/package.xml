@@ -10,6 +10,30 @@
         <name>Profile</name>
     </types>
     <types>
+        <members>Product2</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Pricebook2</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>PricebookEntry</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ReportType</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ReportFolder</name>
+    </types>
+    <types>
         <members>*</members>
         <name>ApexPage</name>
     </types>
