@@ -1,2 +1,43 @@
-<apex:page >
+<apex:page controller="DealershipController" lightningStylesheets="true">
+    <apex:form >
+    	<apex:pageBlock title="Dealerships">
+        	<apex:pageBlockTable value="{!wrappedDealers}" var="wrapped" id="Dealers">
+                <apex:column headerValue="Dealership Name">
+                    <apex:commandLink action="{!changeDealer}" value="{!wrapped.wrappedDealer.Name}" reRender="opps">
+                        <apex:param name="dParam" value="{!wrapped.wrappedDealer.Id}" assignTo="{!currentDealerID}"/>
+                    </apex:commandLink>
+                </apex:column>
+                <apex:column headerValue="Dealership City">
+                	<apex:outputField value="{!wrapped.wrappedDealer.City__c}"/>
+                </apex:column>
+            	<apex:column headerValue="Dealership State">
+                	<apex:outputField value="{!wrapped.wrappedDealer.State__c}" />
+                </apex:column>
+                <apex:column headerValue="Top Opportunity Name">
+                    <apex:outputField value="{!wrapped.topOpp.Name}" />
+                </apex:column>
+                <apex:column headerValue="Top Opportunity Amount">
+                    <apex:outputField value="{!wrapped.topOpp.Amount}" />
+	            </apex:column>
+                <apex:outputField />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Open Opportunities for {!currentDealerName}" id="opps">
+            <apex:pageBlockTable value="{!currentDealerOpportunities}" var="opp" >
+            	<apex:column headerValue="Opportunity Name">
+                    <apex:outputField value="{!opp.Name}" />
+                </apex:column>
+                <apex:column headerValue="Opportunity Amount">
+                    <apex:outputField value="{!opp.Amount}" />
+                </apex:column>
+                <apex:column headerValue="Opportunity Close Date">
+                	<apex:outputField value="{!opp.CloseDate}" />
+                </apex:column>
+                <apex:column headerValue="Opportunity Stage">
+                	<apex:outputField value="{!opp.StageName}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
 </apex:page>
