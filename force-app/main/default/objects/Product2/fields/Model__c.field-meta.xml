@@ -40,11 +40,6 @@
                 <default>false</default>
                 <label>CyberTruck</label>
             </value>
-            <value>
-                <fullName>Model T</fullName>
-                <default>false</default>
-                <label>Model T</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
