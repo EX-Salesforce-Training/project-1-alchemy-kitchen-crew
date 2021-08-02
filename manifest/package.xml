@@ -22,6 +22,44 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Opportunity</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AssignmentRules</name>
+    </types>
+      <types>
+        <members>*</members>
+        <name>AutoResponseRules</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>EscalationRules</name>
+    </types>
+    
+    <types>
+        <members>Custom-HR</members>
+        <members>Custom-Manager</members>
+        <members>Custom-Shop</members>
+        <members>Custom: Sales Profile</members>
+        <members>Custom: Support Profile</members>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Layout</name>
+    </types>
+    <types>
         <members>*</members>
         <name>Report</name>
     </types>
@@ -33,6 +71,7 @@
         <members>*</members>
         <name>ReportFolder</name>
     </types>
+    
     <types>
         <members>*</members>
         <name>ApexPage</name>
