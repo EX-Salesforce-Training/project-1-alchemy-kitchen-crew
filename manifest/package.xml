@@ -18,10 +18,6 @@
     </types>
     <types>
         <members>*</members>
-        <name>CustomField</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -36,7 +32,6 @@
         <members>*</members>
         <name>EscalationRules</name>
     </types>
-    
     <types>
         <members>Custom-HR</members>
         <members>Custom-Manager</members>
@@ -71,7 +66,7 @@
         <members>*</members>
         <name>DashboardFolder</name>
     </types>
-       <types>
+    <types>
         <members>*</members>
         <name>ApexClass</name>
     </types>
