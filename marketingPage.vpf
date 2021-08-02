@@ -1,0 +1,40 @@
+<apex:page controller="dataTableCon" id="thePage" standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false">
+    
+
+
+    
+
+
+    
+        <apex:pageBlock title="Campaigns">    
+    
+     <apex:form>
+      <apex:inputText value="{!searchKey}" label="Input" title="search"/>
+        
+            </apex:form>
+
+    <apex:pageBlockTable value="{!campaigns}" var="campaign" id="theTable"  styleClass="slds-table slds-table_bordered"
+        rowClasses="odd,even" >
+        
+        
+        
+          
+        <apex:facet name="header">Campaign List</apex:facet>
+       
+
+        <apex:column>
+            <apex:facet name="header">Name</apex:facet>
+        
+            <apex:outputText value="{!campaign.name}"/>
+        </apex:column>
+
+        <apex:column>
+            <apex:facet name="header">Owner</apex:facet>
+
+            <apex:outputText value="{!campaign.status}"/>
+        </apex:column>
+
+    </apex:pageBlockTable>
+
+    </apex:pageBlock>
+</apex:page>
