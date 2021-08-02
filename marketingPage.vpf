@@ -1,40 +1,91 @@
-<apex:page controller="dataTableCon" id="thePage" standardStylesheets="true" showHeader="false" sidebar="false" applyHtmlTag="false">
-    
-
-
+<apex:page controller="dataTableCon" id="thePage" standardStylesheets="true" >
     
 
 
     
         <apex:pageBlock title="Campaigns">    
-    
-     <apex:form>
-      <apex:inputText value="{!searchKey}" label="Input" title="search"/>
-        
-            </apex:form>
-
+    <apex:pageBlockSection title="Campaigns"> 
+        <apex:form>
     <apex:pageBlockTable value="{!campaigns}" var="campaign" id="theTable"  styleClass="slds-table slds-table_bordered"
         rowClasses="odd,even" >
         
-        
+     
         
           
         <apex:facet name="header">Campaign List</apex:facet>
        
 
-        <apex:column>
+        <apex:column >
             <apex:facet name="header">Name</apex:facet>
         
-            <apex:outputText value="{!campaign.name}"/>
+            <apex:outputText value="{!campaign.name}" />
+         
+
         </apex:column>
 
-        <apex:column>
-            <apex:facet name="header">Owner</apex:facet>
+        <apex:column >
+            <apex:facet name="header">Status</apex:facet>
+            <apex:outputField value="{!campaign.status}" >
+                <apex:inlineEditSupport event="ondblClick" /> 
+            </apex:outputField>
+      	  </apex:column>
+        
+         <apex:column >
+            <apex:facet name="header">Number Of Responses</apex:facet>
+            <apex:outputField value="{!campaign.NumberOfResponses}" >
+                <apex:inlineEditSupport event="ondblClick" /> 
+            </apex:outputField>
+      	  </apex:column>
+        
+        
+        <apex:column >
+            <apex:facet name="header">Expected revenue</apex:facet>
+            <apex:outputField value="{!campaign.ExpectedRevenue}" >
+                <apex:inlineEditSupport event="ondblClick" /> 
+            </apex:outputField>
+      	  </apex:column>
+   		 </apex:pageBlockTable>
+        </apex:form>
+       
+            </apex:pageBlockSection>
+            
+          
+    
+<apex:pageBlockSection title="Create a new Campaign">
+      <apex:form>
+        <apex:pageBlock mode="edit">
+            <apex:pageMessages/>
+            <apex:pageBlockSection>
+                <apex:inputField value="{!campaign.name}"/>
+            </apex:pageBlockSection>
+            
+                <apex:pageBlockSection>
+                <apex:inputField value="{!campaign.status}"/>
+            </apex:pageBlockSection>
+            
+                <apex:pageBlockSection>
+                <apex:inputField value="{!campaign.ExpectedRevenue}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+               
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+          
+          
+            <apex:pageBlockSectionItem >
+                        <apex:commandButton action="{!save}" value="Submit"/>
+                    </apex:pageBlockSectionItem>
 
-            <apex:outputText value="{!campaign.status}"/>
-        </apex:column>
-
-    </apex:pageBlockTable>
-
+          
+    </apex:form>
+            </apex:pageBlockSection>
+            
+        
+            
+      <apex:pageBlockSection title="Reports"> 
+                   <analytics:reportChart reportId="01Z5B0000004w7B" >
+  				   </analytics:reportChart>
+                   
+            </apex:pageBlockSection>
     </apex:pageBlock>
 </apex:page>
