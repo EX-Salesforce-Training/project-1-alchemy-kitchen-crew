@@ -1,0 +1,13 @@
+public class dataTableCon {
+
+    List<Campaign> campaigns;
+    public String searchKey {get;set;}
+
+    public List<Campaign> getCampaigns() {
+        if(campaigns == null){
+            campaigns = [SELECT Name, status FROM campaign LIMIT 10];
+        }
+        return campaigns;
+    }
+
+}
