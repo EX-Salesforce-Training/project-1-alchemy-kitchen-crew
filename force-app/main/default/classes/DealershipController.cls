@@ -1,8 +1,6 @@
-public class DealershipController {
+public with sharing class DealershipController {
     
     public List<Opportunity> currentDealerOpportunities {get;set;}
-    
-    public String currentDealerID {get;set;}
     
     public String currentDealerName {get;set;}
     
@@ -30,9 +28,7 @@ public class DealershipController {
     
     
 	public  void changeDealer() {
-    	currentDealerOpportunities = [SELECT Name, Amount, CloseDate,StageName  FROM Opportunity WHERE (Opportunity.Dealership__r.Id = :currentDealerID AND StageName != 'Closed')];
-        Dealership__c d = [SELECT Name FROM Dealership__c WHERE Id = :currentDealerId];
-        currentDealerName = d.Name;
+    	currentDealerOpportunities = [SELECT Name, Amount, CloseDate,StageName  FROM Opportunity WHERE (Opportunity.Dealership__r.Name = :currentDealerName AND StageName != 'Closed')];
 	}
     
     

@@ -4,7 +4,7 @@
         	<apex:pageBlockTable value="{!wrappedDealers}" var="wrapped" id="Dealers">
                 <apex:column headerValue="Dealership Name">
                     <apex:commandLink action="{!changeDealer}" value="{!wrapped.wrappedDealer.Name}" reRender="opps">
-                        <apex:param name="dParam" value="{!wrapped.wrappedDealer.Id}" assignTo="{!currentDealerID}"/>
+                        <apex:param name="dParam" value="{!wrapped.wrappedDealer.Name}" assignTo="{!currentDealerName}"/>
                     </apex:commandLink>
                 </apex:column>
                 <apex:column headerValue="Dealership City">
