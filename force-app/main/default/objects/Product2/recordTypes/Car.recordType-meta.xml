@@ -86,10 +86,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Model T</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Model X</fullName>
             <default>false</default>
         </values>
@@ -171,6 +167,10 @@
         </values>
         <values>
             <fullName>2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2022</fullName>
             <default>false</default>
         </values>
     </picklistValues>
