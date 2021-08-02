@@ -7,7 +7,7 @@
         <body class="slds-scope">
             
             
-            <apex:form >
+            <apex:form  id="frm" enctype="multipart/form-data">
                 <div class="slds-grid slds-wrap">
                     <div class="slds-p-horizontal--small slds-size--1-of-1 slds-m-top--large">
                         <h3 class="slds-text-heading--small slds-m-bottom--medium">Lead Information</h3>
@@ -34,7 +34,7 @@
                         <div class="slds-form-element slds-hint-parent">
                             <span class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Postal Code</span>
                             <div class="slds-form-element__control">
-                                <apex:inputField styleClass="slds-input" value="{!Lead.LastName}"/>
+                                <apex:inputField styleClass="slds-input" value="{!Lead.PostalCode}"/>
                             </div>
                             
                             
@@ -45,7 +45,7 @@
                         <div class="slds-form-element slds-hint-parent">
                             <span class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Phone</span>
                             <div class="slds-form-element__control">
-                                <apex:inputField styleClass="slds-input" value="{!Lead.LastName}"/>
+                                <apex:inputField styleClass="slds-input" value="{!Lead.Phone}"/>
                             </div>
                             
                             
@@ -56,13 +56,23 @@
                         <div class="slds-form-element slds-hint-parent">
                             <span class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Email</span>
                             <div class="slds-form-element__control">
-                                <apex:inputField styleClass="slds-input" value="{!Lead.LastName}"/>
+                                <apex:inputField styleClass="slds-input" value="{!Lead.Email}"/>
                             </div>
                             
                             
                         </div>
                     </div>
                     
+                       <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Company</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input" value="{!Lead.Company}"/>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
                     
               <div class="slds-p-horizontal--small slds-size--1-of-2">
                 <div class="slds-form-element">
@@ -71,7 +81,7 @@
   			    	<label class="slds-form-element__label">Select Dealership</label>
   			 	    <div class="slds-form-element__control">
    			        <div class="slds-select_container">
-                    <apex:selectList size="1" value="{!selectedDealership}" styleClass="slds-select">
+                    <apex:selectList size="1" value="{!Lead.Dealership__c}" styleClass="slds-select">
                 <apex:selectOptions value="{!DealershipList}" />
             </apex:selectList>
     	    </div>
@@ -82,19 +92,54 @@
                     
                     
                     
-                          <div class="slds-p-horizontal--small slds-size--1-of-2">
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
                 <div class="slds-form-element">
  					
  				    <div class="slds-form-element">
   			    	<label class="slds-form-element__label">Select Model</label>
   			 	    <div class="slds-form-element__control">
    			        <div class="slds-select_container">
-                    <apex:selectList size="1" value="{!selectedDealership}" styleClass="slds-select">
+                    <apex:selectList size="1" value="{!Lead.Model__c}" styleClass="slds-select">
                 <apex:selectOptions value="{!items}" />
             </apex:selectList>
     	    </div>
   	  </div>
 			</div>
+					</div>
+                    </div>
+                    
+                                        
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                <div class="slds-form-element__vonytol">
+ 					
+ 				    <div class="slds-checkbox">
+  					<abbr class="slds-required" title="required">*</abbr>
+     				 <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" aria-describedby="error_01" />
+     				 <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+     				 <span class="slds-checkbox_faux"></span>
+      			 	 <span class="slds-form-element__label">Test Drive</span>
+     				 </label>
+			</div>
+                    
+                    	    <div class="slds-checkbox">
+  					<abbr class="slds-required" title="required">*</abbr>
+     				 <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" aria-describedby="error_01" />
+     				 <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+     				 <span class="slds-checkbox_faux"></span>
+      			 	 <span class="slds-form-element__label">Price Quote</span>
+     				 </label>
+			</div>
+                    
+                    
+                     <div class="slds-checkbox">
+  					<abbr class="slds-required" title="required">*</abbr>
+     				 <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" aria-describedby="error_01" />
+     				 <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+     				 <span class="slds-checkbox_faux"></span>
+      			 	 <span class="slds-form-element__label">More Information</span>
+     				 </label>
+			</div>
+                    
 					</div>
                     </div>
                     
