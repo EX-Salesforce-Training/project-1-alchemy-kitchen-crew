@@ -1,13 +1,31 @@
 <apex:page standardController="Campaign" extensions="campaignControllerExtension" id="thePage" standardStylesheets="true" >
     
+	<style>
+    
+        .bPageBlock{
+       background: #B0E0E6 !important ;
+          }
+         .column:hover {
+             colour: black;
+         }
 
+        .column {
+         background-color: blanchedalmond;
+         }
+
+          .newheader {
+         font-size:300%;
+         font-weight:bold;
+         text-align:center;
+         }
+    </style>
 
     
         <apex:pageBlock title="Campaigns">    
     <apex:pageBlockSection title="Campaigns"> 
         <apex:form >
     <apex:pageBlockTable value="{!campaigns}" var="campaign" id="theTable"  styleClass="slds-table slds-table_bordered"
-        rowClasses="odd,even" >
+        rowClasses="odd,even" style="blue" >
         
      
         
@@ -52,7 +70,7 @@
           
     
 <apex:pageBlockSection title="Create a new Campaign">
-      <apex:form >
+      <apex:form styleClass="fsWrapper" >
         <apex:pageBlock mode="edit">
             <apex:pageMessages />
             <apex:pageBlockSection >
