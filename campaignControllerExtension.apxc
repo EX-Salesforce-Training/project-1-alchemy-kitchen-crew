@@ -7,37 +7,7 @@ public class campaignControllerExtension {
     private Decimal expectedRevenue;
     private String status;
     
-    
-    public String getName(){
-        return this.name;
-    }
-    
-    public void setName(String name){
-        this.name=Name;
-    }
-    
-    public void setExpectedRevenue(Decimal expectedRevenue){
-        this.expectedRevenue=expectedRevenue;
-    }
-    
-    public Decimal getExpectedRevenue(){
-        return this.expectedRevenue;
-    }
-    
-    public String getStatus(){
-        return this.status;
-    }
-    
-    public void setStatus(String status){
-        this.status=status;
-    }
-    
-    
-    
-     public  campaignControllerExtension(){
-        // this.campaign = (Campaign)stdController.getRecord();
-        
-    }
+
 
     
     public List<Campaign> getCampaigns() {
@@ -52,28 +22,6 @@ public class campaignControllerExtension {
          this.campaign = (Campaign)stdController.getRecord();
         
     }
-     public PageReference save() {
-       
-         PageReference p =null;
-        try {
-            Campaign campaign = new Campaign(Name=this.Name,
-                                            expectedRevenue=this.expectedRevenue,
-                                            status=this.status);
-            insert(campaign);
-        } catch(System.DMLException e) {
-            ApexPages.addMessages(e);
-           // p=Page.failure;
-            p.getParameters().put('error','noInsert');
-           
-        }
-         if(p==null){
-           //  p=Page.success;
-         }
-        //  After successful Save, navigate to the default view page
-    	
-         p.setRedirect(true);
-         return p;
-      
-    }
+
 
 }
