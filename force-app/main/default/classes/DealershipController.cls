@@ -26,7 +26,9 @@ public with sharing class DealershipController {
     
     
     
-    
+    // Clicking a name of the Dealer in the top Table triggers this method
+    // The link(commandlink) changes the value of currentDealerName
+    // This method queries for the open opportunites that are assocaited with the specific dealership (currentDealerName)
 	public  void changeDealer() {
     	currentDealerOpportunities = [SELECT Name, Amount, CloseDate,StageName  FROM Opportunity WHERE (Opportunity.Dealership__r.Name = :currentDealerName AND StageName != 'Closed')];
 	}
@@ -36,7 +38,8 @@ public with sharing class DealershipController {
     
     
     
-    
+    // Wrapper Class to contain the a Dealership and it's Top Opportunity (by amount)
+    // Only getting open opportunites
     private class Wrap {
         public Dealership__c wrappedDealer {get; set;}
         public Opportunity topOpp {get;set;}

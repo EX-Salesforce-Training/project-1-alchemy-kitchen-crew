@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <classAccesses>
-        <apexClass>PricebookEntryExtension</apexClass>
+        <apexClass>DealershipController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-<<<<<<< HEAD
         <apexClass>DealershipControllerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>DealershipExtension</apexClass>
-=======
-        <apexClass>PricebookEntryExtensionTest</apexClass>
->>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
         <enabled>false</enabled>
     </classAccesses>
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
-<<<<<<< HEAD
         <field>Car__c.Contact__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -90,8 +85,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-=======
->>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
         <field>Dealership__c.City__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -166,7 +159,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Opportunity.Dealership__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -211,11 +204,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Opportunity.PartnerAccountId</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Probability</field>
         <readable>true</readable>
@@ -236,32 +224,32 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Add_ons__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Contact__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Custom_Exterior_Color__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Custom_Interior_Color__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Customer_Vehicle__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Dealership__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -276,7 +264,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Exterior_Color__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -296,23 +284,28 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Image__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Interior_Color__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Mileage__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Model__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.Opportunity__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -326,17 +319,17 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Range_EPA_miles__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Service_Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Service_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -346,22 +339,22 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Top_Speed_mph__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.VIN__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.X0_60_Time_s__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Product2.Year__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -406,6 +399,17 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>CampaignMember-Campaign Member Page Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Car__c-Car Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Car__c-Car Layout</layout>
+        <recordType>Car__c.Customer_Owned</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Car__c-Car Layout</layout>
+        <recordType>Car__c.Dealer_Owned</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CardPaymentMethod-Card Payment Method Layout</layout>
@@ -708,6 +712,15 @@
         <layout>WorkThanks-Thanks Layout</layout>
     </layoutAssignments>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Dealership__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -735,38 +748,25 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-<<<<<<< HEAD
         <apexPage>DealershipPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
         <apexPage>testpage</apexPage>
-=======
-        <apexPage>PricebookEntryPage</apexPage>
->>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
         <enabled>false</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
         <default>false</default>
-<<<<<<< HEAD
         <recordType>Car__c.Customer_Owned</recordType>
-=======
-        <recordType>Product2.Add_on</recordType>
->>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-<<<<<<< HEAD
         <recordType>Car__c.Dealer_Owned</recordType>
-=======
-        <recordType>Product2.Car</recordType>
->>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-<<<<<<< HEAD
         <recordType>Product2.Add_on</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
@@ -779,10 +779,6 @@
         <default>false</default>
         <recordType>Product2.Car_Service</recordType>
         <visible>false</visible>
-=======
-        <recordType>Product2.Car_Service</recordType>
-        <visible>true</visible>
->>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>standard-Opportunity</tab>
