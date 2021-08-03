@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>AllProducts</fullName>
-    <columns>PRODUCT2.NAME</columns>
-    <columns>PRODUCT2.RECORD_TYPE</columns>
-    <columns>Dealership__c</columns>
-    <columns>Interior_Color__c</columns>
-    <columns>Exterior_Color__c</columns>
-    <columns>Model__c</columns>
-    <columns>Service_Type__c</columns>
-    <columns>Add_ons__c</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>PRODUCT2.RECORD_TYPE</field>
-        <operation>equals</operation>
-        <value>Product2.Add_on,Product2.Car,Product2.Car_Service</value>
-    </filters>
     <label>All Products</label>
 </ListView>

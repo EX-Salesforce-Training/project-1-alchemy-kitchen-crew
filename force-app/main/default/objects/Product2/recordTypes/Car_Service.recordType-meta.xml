@@ -86,6 +86,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Model T</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Model X</fullName>
             <default>false</default>
         </values>
