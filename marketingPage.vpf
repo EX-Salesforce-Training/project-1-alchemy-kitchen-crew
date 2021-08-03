@@ -1,11 +1,11 @@
-<apex:page controller="dataTableCon" id="thePage" standardStylesheets="true" >
+<apex:page standardController="Campaign" extensions="dataTableCon" id="thePage" standardStylesheets="true" >
     
 
 
     
         <apex:pageBlock title="Campaigns">    
     <apex:pageBlockSection title="Campaigns"> 
-        <apex:form>
+        <apex:form >
     <apex:pageBlockTable value="{!campaigns}" var="campaign" id="theTable"  styleClass="slds-table slds-table_bordered"
         rowClasses="odd,even" >
         
@@ -52,33 +52,29 @@
           
     
 <apex:pageBlockSection title="Create a new Campaign">
-      <apex:form>
+      <apex:form >
         <apex:pageBlock mode="edit">
-            <apex:pageMessages/>
-            <apex:pageBlockSection>
+            <apex:pageMessages />
+            <apex:pageBlockSection >
                 <apex:inputField value="{!campaign.name}"/>
             </apex:pageBlockSection>
             
-                <apex:pageBlockSection>
+                <apex:pageBlockSection >
                 <apex:inputField value="{!campaign.status}"/>
             </apex:pageBlockSection>
             
-                <apex:pageBlockSection>
+                <apex:pageBlockSection >
                 <apex:inputField value="{!campaign.ExpectedRevenue}"/>
             </apex:pageBlockSection>
             <apex:pageBlockButtons location="bottom">
                
-            </apex:pageBlockButtons>
+              <apex:commandButton action="{!save}" value="Submit"/>
+           </apex:pageBlockButtons>
+        
         </apex:pageBlock>
-          
-          
-            <apex:pageBlockSectionItem >
-                        <apex:commandButton action="{!save}" value="Submit"/>
-                    </apex:pageBlockSectionItem>
-
-          
+         
     </apex:form>
-            </apex:pageBlockSection>
+</apex:pageBlockSection>
             
         
             
