@@ -1,4 +1,4 @@
-<apex:page standardController="Campaign" extensions="dataTableCon" id="thePage" standardStylesheets="true" >
+<apex:page standardController="Campaign" extensions="campaignControllerExtension" id="thePage" standardStylesheets="true" >
     
 
 
