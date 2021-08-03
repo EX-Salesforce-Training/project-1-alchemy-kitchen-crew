@@ -1,157 +1,50 @@
-<apex:page showHeader="false" sidebar="false" standardStylesheets="true"
-           standardController="Lead" extensions="leadController" applyHTmlTag="false">
-    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <head>
-            <apex:slds />
-        </head>
-        <body class="slds-scope">
+<apex:page standardController="Lead" extensions="leadController">
+    <apex:slds />
+    
+    <!-- REQUIRED SLDS WRAPPER -->
+    <div class="slds-scope">
+    </div>
+<apex:form id="frm" enctype="multipart/form-data" style="border-style:solid;border-width:2px;
+                      border-color:red;background-color:light red" >
+    <apex:pageMessages />
+    <apex:pageBlock title=" Lead" id="pg_blk">
+        <apex:pageBlockSection showHeader="false" columns="1" id="block1">
             
-            
-            <apex:form  id="frm" enctype="multipart/form-data">
-                <div class="slds-grid slds-wrap">
-                    <div class="slds-p-horizontal--small slds-size--1-of-1 slds-m-top--large">
-                        <h3 class="slds-text-heading--small slds-m-bottom--medium">Lead Information</h3>
-                    </div>
-                    <div class="slds-p-horizontal--small slds-size--1-of-2">
-                        <div class="slds-form-element slds-hint-parent">
-                            <span class="slds-form-element__label">First Name</span>
-                            <div class="slds-form-element__control">
-                                <apex:inputField styleClass="slds-input" value="{!Lead.FirstName}"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slds-p-horizontal--small slds-size--1-of-2">
-                        <div class="slds-form-element slds-hint-parent">
-                            <span class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Last Name</span>
-                            <div class="slds-form-element__control">
-                                <apex:inputField styleClass="slds-input" value="{!Lead.LastName}"/>
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-                     <div class="slds-p-horizontal--small slds-size--1-of-2">
-                        <div class="slds-form-element slds-hint-parent">
-                            <span class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Postal Code</span>
-                            <div class="slds-form-element__control">
-                                <apex:inputField styleClass="slds-input" value="{!Lead.PostalCode}"/>
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-                    
-                       <div class="slds-p-horizontal--small slds-size--1-of-2">
-                        <div class="slds-form-element slds-hint-parent">
-                            <span class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Phone</span>
-                            <div class="slds-form-element__control">
-                                <apex:inputField styleClass="slds-input" value="{!Lead.Phone}"/>
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-                    
-                      <div class="slds-p-horizontal--small slds-size--1-of-2">
-                        <div class="slds-form-element slds-hint-parent">
-                            <span class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Email</span>
-                            <div class="slds-form-element__control">
-                                <apex:inputField styleClass="slds-input" value="{!Lead.Email}"/>
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-                    
-                       <div class="slds-p-horizontal--small slds-size--1-of-2">
-                        <div class="slds-form-element slds-hint-parent">
-                            <span class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Company</span>
-                            <div class="slds-form-element__control">
-                                <apex:inputField styleClass="slds-input" value="{!Lead.Company}"/>
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-                    
-              <div class="slds-p-horizontal--small slds-size--1-of-2">
-                <div class="slds-form-element">
- 					
- 				    <div class="slds-form-element">
-  			    	<label class="slds-form-element__label">Select Dealership</label>
-  			 	    <div class="slds-form-element__control">
-   			        <div class="slds-select_container">
-                    <apex:selectList size="1" value="{!Lead.Dealership__c}" styleClass="slds-select">
-                <apex:selectOptions value="{!DealershipList}" />
-            </apex:selectList>
-    	    </div>
-  	  </div>
-			</div>
-					</div>
-                    </div>
-                    
-                    
-                    
-                <div class="slds-p-horizontal--small slds-size--1-of-2">
-                <div class="slds-form-element">
- 					
- 				    <div class="slds-form-element">
-  			    	<label class="slds-form-element__label">Select Model</label>
-  			 	    <div class="slds-form-element__control">
-   			        <div class="slds-select_container">
-                    <apex:selectList size="1" value="{!Lead.Model__c}" styleClass="slds-select">
-                <apex:selectOptions value="{!items}" />
-            </apex:selectList>
-    	    </div>
-  	  </div>
-			</div>
-					</div>
-                    </div>
-                    
-                                        
-                <div class="slds-p-horizontal--small slds-size--1-of-2">
-                <div class="slds-form-element__vonytol">
- 					
- 				    <div class="slds-checkbox">
-  					<abbr class="slds-required" title="required">*</abbr>
-     				 <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" aria-describedby="error_01" />
-     				 <label class="slds-checkbox__label" for="checkbox-unique-id-73">
-     				 <span class="slds-checkbox_faux"></span>
-      			 	 <span class="slds-form-element__label">Test Drive</span>
-     				 </label>
-			</div>
-                    
-                    	    <div class="slds-checkbox">
-  					<abbr class="slds-required" title="required">*</abbr>
-     				 <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" aria-describedby="error_01" />
-     				 <label class="slds-checkbox__label" for="checkbox-unique-id-73">
-     				 <span class="slds-checkbox_faux"></span>
-      			 	 <span class="slds-form-element__label">Price Quote</span>
-     				 </label>
-			</div>
-                    
-                    
-                     <div class="slds-checkbox">
-  					<abbr class="slds-required" title="required">*</abbr>
-     				 <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" aria-describedby="error_01" />
-     				 <label class="slds-checkbox__label" for="checkbox-unique-id-73">
-     				 <span class="slds-checkbox_faux"></span>
-      			 	 <span class="slds-form-element__label">More Information</span>
-     				 </label>
-			</div>
-                    
-					</div>
-                    </div>
-                    
-                    
-                    
-                    
-                    <div class="slds-p-horizontal--small slds-m-top--medium slds-size--1-of-1 slds-align--absolute-center">
+            <apex:pageBlockSectionItem ><apex:outputLabel >First Name: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="firstName" value="{!lead.FirstName}" required="true"/></apex:pageBlockSectionItem>
 
-                        <apex:commandButton styleClass="slds-button slds-button--brand" value="Submit" action="{!save}" />
-                    </div>
-                </div>
-            </apex:form>
-        </body>
-    </html>
+            
+            <apex:pageBlockSectionItem ><apex:outputLabel >Last Name: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="lastName" value="{!lead.LastName}" required="true"/></apex:pageBlockSectionItem>
+
+   
+            <apex:pageBlockSectionItem ><apex:outputLabel >Zipcode*: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="Zipcode" value="{!lead.postalCode}" required="true"/></apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem ><apex:outputLabel >Phone*: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="MobilePhone" value="{!lead.phone}" required="true"/></apex:pageBlockSectionItem>
+
+       		<apex:pageBlockSectionItem ><apex:outputLabel >Email: </apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem ><apex:inputField id="Email" value="{!lead.Email}" required="true"/></apex:pageBlockSectionItem>
+			
+            <apex:pageBlockSectionItem ><apex:outputLabel >Select a Dealership</apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:selectList size="1">
+			<apex:selectOptions value="{!DealershipList}" ></apex:selectOptions> 		    
+            </apex:selectList>
+        
+			<apex:pageBlockSectionItem ><apex:outputLabel >Select a Model</apex:outputLabel></apex:pageBlockSectionItem>
+            <apex:selectList size="1">
+                
+			<apex:selectOptions value="{!items}" ></apex:selectOptions> 		    
+            </apex:selectList>  
+            
+            
+      
+            <apex:pageBlockSectionItem >
+                        <apex:commandButton action="{!save}" value="Submit"/>
+                    </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+<apex:includeLightning />
+    </apex:pageBlock>
+</apex:form>
 </apex:page>
