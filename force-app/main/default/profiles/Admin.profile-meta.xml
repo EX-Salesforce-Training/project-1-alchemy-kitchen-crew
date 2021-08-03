@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <classAccesses>
-        <apexClass>DealershipController</apexClass>
+        <apexClass>PricebookEntryExtension</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+<<<<<<< HEAD
         <apexClass>DealershipControllerTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>DealershipExtension</apexClass>
+=======
+        <apexClass>PricebookEntryExtensionTest</apexClass>
+>>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< HEAD
         <field>Car__c.Contact__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -85,6 +90,8 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+=======
+>>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
         <field>Dealership__c.City__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -159,9 +166,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Opportunity.Dealership__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -174,7 +181,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Opportunity.ExpectedRevenue</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -202,6 +209,11 @@
         <editable>true</editable>
         <field>Opportunity.OrderNumber__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.PartnerAccountId</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -357,6 +369,12 @@
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
+=======
+        <layout>AccountBrand-Account Brand Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+>>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
         <layout>AlternativePaymentMethod-Alternative Payment Method Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -396,6 +414,7 @@
         <layout>CampaignMember-Campaign Member Page Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
         <layout>Car__c-Car Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -407,6 +426,8 @@
         <recordType>Car__c.Dealer_Owned</recordType>
     </layoutAssignments>
     <layoutAssignments>
+=======
+>>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
         <layout>CardPaymentMethod-Card Payment Method Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -473,6 +494,12 @@
         <layout>Dealership__c-Dealership Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+<<<<<<< HEAD
+=======
+        <layout>DelegatedAccount-External Managed Account Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+>>>>>>> 2fe9dde4bf37d5dfcac089f3ca8a3db37c1990b9
         <layout>DigitalWallet-Digital Wallet Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -712,15 +739,6 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
-        <object>Car__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
         <object>Dealership__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -770,23 +788,9 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
-        <apexPage>DealershipPage</apexPage>
+        <apexPage>PricebookEntryPage</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
-    <pageAccesses>
-        <apexPage>testpage</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Car__c.Customer_Owned</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>Car__c.Dealer_Owned</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Product2.Add_on</recordType>
