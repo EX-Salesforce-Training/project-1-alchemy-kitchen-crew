@@ -18,7 +18,7 @@ public class PricebookEntryExtension {
     public String sortOrder = 'Product2Id';
     public String sortDirection = 'ASC';
     
-    public PricebookEntryExtension(ApexPages.StandardController sc) {
+    public PricebookEntryExtension(ApexPages.StandardController ssc) {
         priceBookEntryList = new List<PriceBookEntry>();
     	totalRecordCount = [SELECT count() FROM PricebookEntry];
     }
