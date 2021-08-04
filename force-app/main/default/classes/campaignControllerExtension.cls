@@ -1,3 +1,18 @@
+/*
+Title: CampaignControllerExtension
+Author: Rafael Loustaunau
+Description: Extension Class for the Campaign VisualForce Page. Queries for the list of campaigns and creates variables used in the 
+Visualforce page
+LastUpdated: 8/3/21
+*/
+
+
+
+
+
+
+
+
 public class campaignControllerExtension {
 
     public Campaign campaign { get;set; }
