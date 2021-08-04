@@ -28,18 +28,18 @@
          }
 
           .newheader {
-		 text-align:center;
+         text-align:center;
          font-size:300%;
          font-weight:bold;
          
          }
         
-		.productForm {
-        	color: white;
-   			background-color: darkblue;
+        .productForm {
+            color: white;
+            background-color: darkblue;
         }
-    	.columnTitle {
-        	text-align: center;
+        .columnTitle {
+            text-align: center;
             font-weight: bold;
             font-size:16pt;
             background: #ffffff;
@@ -49,13 +49,13 @@
             border-radius:8px;
         }
         .formHeader {
-        	text-align: center;
-        	font-size: 14pt;
-        	background-color: lightgray;
+            text-align: center;
+            font-size: 14pt;
+            background-color: lightgray;
         }
         .slds-button_neutral:hover {
-        	background-color: beige !important;
-        	color: black !important;
+            background-color: beige !important;
+            color: black !important;
         }
         
         .slds-button_neutral {
@@ -63,8 +63,8 @@
 
         }
         h1 {
-        	font-size:50px;
-        	text-align:center
+            font-size:50px;
+            text-align:center
         }
     </style>
     
@@ -89,12 +89,12 @@
     
     <!-- Add Navigation Buttons -->
     <apex:form >
-		 <apex:pageBlock > 
+         <apex:pageBlock > 
                  <apex:commandButton action="{!Homep}" value="Home" />
                  <apex:commandButton action="{!Dealerp}" value="Dealership" /> 
                  <apex:commandButton action="{!Pricep}" value="Pricebook Entry" />
-             	 <apex:commandButton action="{!Campep}" value="Campaign Page" />
-      	 </apex:pageBlock>
+                 <apex:commandButton action="{!Campep}" value="Campaign Page" />
+         </apex:pageBlock>
             
     </apex:form>
     
@@ -109,12 +109,12 @@
         
             <apex:pageBlockSection columns="1">
                 First Name:  {! $User.FirstName }   <br/>
-                Last Name:  {! $User.LastName }   	<br/>
-                Username:  {! $User.Username }   	<br/>
+                Last Name:  {! $User.LastName }     <br/>
+                Username:  {! $User.Username }      <br/>
             </apex:pageBlockSection>
             
         </apex:pageBlock>
- 	
+    
     
         
         <apex:pageBlock title="Today's Date">
@@ -129,10 +129,10 @@
         </apex:pageBlock>
         
       <!-- Old Idea to use Account Information in early developement.
-		   We prioritized the Opportunities due to focus on Reports
-		   dashboards, and charts.
+           We prioritized the Opportunities due to focus on Reports
+           dashboards, and charts.
 
-			<apex:pageBlockSection >
+            <apex:pageBlockSection >
         
             <apex:pageBlock title="Account Summary">
             
@@ -148,7 +148,7 @@
         
         </apex:pageBlockSection>
 
-		
+        
         
         <apex:pageBlockSection >
         
@@ -169,14 +169,14 @@
    </apex:pageBlockTable>
             
             
-		</apex:pageBlock>
+        </apex:pageBlock>
         -->
 <apex:pageBlock title="Create New Opportunity">
         <apex:pageBlockSection >
         
 
       
-		<apex:form style="object-fit:cover;text-align: center;" >
+        <apex:form style="object-fit:cover;text-align: center;" >
              <apex:pageBlock > 
                  <apex:pageMessages />
                     <apex:pageBlockSection columns="2">
@@ -189,7 +189,7 @@
 
         
        
-    				</apex:pageBlockSection>
+                    </apex:pageBlockSection>
 
     <apex:pageBlockButtons >
             <apex:commandButton action="{! save }" value="Save" />
@@ -207,9 +207,9 @@
     
     
      <!-- This Recent Opportunities was getting redundant
-	  from the Dealership Page which already shows all
-	  of the opportunities so we all agreed to keep it there
-	  while the mainpage's purpose was to show off the CSS
+      from the Dealership Page which already shows all
+      of the opportunities so we all agreed to keep it there
+      while the mainpage's purpose was to show off the CSS
         
         <apex:pageBlock title="Opportunity Details">
     <apex:pageBlockSection >
