@@ -10,7 +10,7 @@ Created: 7/29/21
 Last Modified: 8/3/21
 ================================================================-->
 
-<apex:page standardController="PricebookEntry" extensions="PricebookEntryExtension">
+<apex:page standardController="PricebookEntry" extensions="PricebookEntryExtension,NavigationExtension">
     <!-- ****************************** STYLING ************************************-->
     <apex:slds />
     <style type="text/css">
@@ -28,7 +28,7 @@ Last Modified: 8/3/21
          }
         .column {
          	background-color: blanchedalmond;
-        	font-size: 16pt;
+        	font-size: 13pt;
          }
         .column:hover {
              colour: black;
@@ -39,7 +39,7 @@ Last Modified: 8/3/21
         	background-color:rgba(0, 0, 0, 0) !important;
          }
     	.columnTitle {
-        	text-align: center;
+        
             font-weight: bold;
             font-size:16pt;
             background: #B0E0E6;
@@ -52,6 +52,9 @@ Last Modified: 8/3/21
         	background-color: yellow !important;
         	color: black !important;
          }
+        #teslaLogo { 
+        border: 4px solid #c9c91e !important ;
+        }
         body {
     		background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/da705069-91b5-41cb-86f3-86a585c6fdf3/bvlatuR/std/2880x1800/MX-Hero-Desktop.jpg) !important;
         	background-position: 50% 50% !important;
@@ -65,7 +68,7 @@ Last Modified: 8/3/21
     <!--****************************** END STYLING *********************************-->
     <body>
         
-    <div class="columnTitle">
+    <div class="columnTitle" id="teslaLogo">
         <apex:image url="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
                     style="max-width:100px;max-height:100px;" />
     </div>
@@ -73,6 +76,24 @@ Last Modified: 8/3/21
     <h1>
     	Price Book Entries
     </h1>
+        
+        
+
+        <!-- Buttons for Navigation -->
+            
+    <apex:form >
+		 <apex:pageBlock mode="maindetail"> 
+                
+                 <apex:commandButton action="{!Homep}" value="Home" />
+                 <apex:commandButton action="{!Dealerp}" value="Dealership" /> 
+                 <apex:commandButton action="{!Pricep}" value="Pricebook Entry" />
+             	 <apex:commandButton action="{!Campep}" value="Campaign Page" />
+       
+      	 </apex:pageBlock>
+    </apex:form>    
+   
+        
+        
         
     <!--****************************** BEGIN FORM ***********************************-->
     

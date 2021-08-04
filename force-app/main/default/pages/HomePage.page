@@ -1,0 +1,239 @@
+<!--______________________________________________________________
+* Homepage.vfp
+*_________________________________________________________________
+*A Visualforce page which displays the homepage, navigation, and
+*a quick way to add Opportunities on the fly. Css focused since
+*this will be the the main page.
+*_________________________________________________________________
+*Author: Jawad Chowdhury
+*Created: 7/27/21
+*Last Modified: 8/4/21
+*_________________________________________________________________-->
+
+
+
+<apex:page standardController="Opportunity" extensions="NavigationExtension,OpportunityExtension" >
+    
+     <apex:slds />
+    <style type="text/css">
+        .bPageBlock{
+       background: #B0E0E6 !important ;
+          }
+         .column:hover {
+             colour: black;
+         }
+
+        .column {
+         background-color: blanchedalmond;
+         }
+
+          .newheader {
+		 text-align:center;
+         font-size:300%;
+         font-weight:bold;
+         
+         }
+        
+		.productForm {
+        	color: white;
+   			background-color: darkblue;
+        }
+    	.columnTitle {
+        	text-align: center;
+            font-weight: bold;
+            font-size:16pt;
+            background: #ffffff;
+            width:100%;
+            border:4px solid black;
+            padding:8px;
+            border-radius:8px;
+        }
+        .formHeader {
+        	text-align: center;
+        	font-size: 14pt;
+        	background-color: lightgray;
+        }
+        .slds-button_neutral:hover {
+        	background-color: beige !important;
+        	color: black !important;
+        }
+        
+        .slds-button_neutral {
+        
+
+        }
+        h1 {
+        	font-size:50px;
+        	text-align:center
+        }
+    </style>
+    
+    
+    
+     
+    
+
+
+        
+            <apex:pageBlock > 
+                <apex:image url="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
+                            style="max-width:100px;max-height:100px;" />
+            </apex:pageBlock>
+     
+   
+        <apex:pageBlock >
+        <apex:image url="https://tesla-cdn.thron.com/delivery/public/image/tesla/da705069-91b5-41cb-86f3-86a585c6fdf3/bvlatuR/std/2880x1800/MX-Hero-Desktop"
+                    style="object-fit:fill"/>
+    
+    </apex:pageBlock>
+    
+    <!-- Add Navigation Buttons -->
+    <apex:form >
+		 <apex:pageBlock > 
+                 <apex:commandButton action="{!Homep}" value="Home" />
+                 <apex:commandButton action="{!Dealerp}" value="Dealership" /> 
+                 <apex:commandButton action="{!Pricep}" value="Pricebook Entry" />
+             	 <apex:commandButton action="{!Campep}" value="Campaign Page" />
+      	 </apex:pageBlock>
+            
+    </apex:form>
+    
+
+    
+    
+    
+        <h1 style="font-size: 50px">
+            Welcome {! $User.FirstName}! Here is your info:
+        </h1>
+        <apex:pageBlock >
+        
+            <apex:pageBlockSection columns="1">
+                First Name:  {! $User.FirstName }   <br/>
+                Last Name:  {! $User.LastName }   	<br/>
+                Username:  {! $User.Username }   	<br/>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+ 	
+    
+        
+        <apex:pageBlock title="Today's Date">
+        
+        <p> Today's Date is {! DATETIMEVALUE(TODAY()) } </p>
+            
+            <p>{! IF( DAY(TODAY()) < 20,
+     'NOTICE: Make sure to sell as many cars as you can! End of Month Quota',
+               'WARNING: Check Inventory soon!' )}</p>
+        
+        
+        </apex:pageBlock>
+        
+      <!-- Old Idea to use Account Information in early developement.
+		   We prioritized the Opportunities due to focus on Reports
+		   dashboards, and charts.
+
+			<apex:pageBlockSection >
+        
+            <apex:pageBlock title="Account Summary">
+            
+                <apex:pageBlockSection >
+                Name: {! Account.Name } <br/>
+                Phone: {! Account.Phone } <br/>
+                Industry: {! Account.Industry } <br/>
+                Revenue: {! Account.AnnualRevenue } <br/>
+                    
+                </apex:pageBlockSection>
+            
+            </apex:pageBlock>
+        
+        </apex:pageBlockSection>
+
+		
+        
+        <apex:pageBlockSection >
+        
+
+            <apex:outputField value="{! Account.Name }" />
+            <apex:outputField value="{! Account.Industry }"/>
+            <apex:outputField value="{! Account.AnnualRevenue }"/>
+            
+        </apex:pageBlockSection>
+        
+
+        <apex:pageBlock title="Contacts">
+   <apex:pageBlockTable value="{!Account.contacts}" var="contact">
+      <apex:column value="{!contact.Name}"/>
+      <apex:column value="{!contact.Title}"/>
+      <apex:column value="{!contact.Phone}"/>
+
+   </apex:pageBlockTable>
+            
+            
+		</apex:pageBlock>
+        -->
+<apex:pageBlock title="Create New Opportunity">
+        <apex:pageBlockSection >
+        
+
+      
+		<apex:form style="object-fit:cover;text-align: center;" >
+             <apex:pageBlock > 
+                 <apex:pageMessages />
+                    <apex:pageBlockSection columns="2">
+                    <apex:inputField value="{!Opportunity.Name}" />
+                    <apex:inputField value="{!Opportunity.Stagename}" />
+                    <apex:inputField value="{!Opportunity.Amount}" />
+                    <apex:inputField value="{!Opportunity.AccountId}" />
+                    <apex:inputField showDatePicker="TRUE" value="{!Opportunity.CloseDate}" required="TRUE" /> 
+
+
+        
+       
+    				</apex:pageBlockSection>
+
+    <apex:pageBlockButtons >
+            <apex:commandButton action="{! save }" value="Save" />
+        </apex:pageBlockButtons> 
+   </apex:pageBlock>  
+    
+            
+
+            
+    </apex:form>        
+        
+        
+      
+        </apex:pageBlockSection>
+    
+    
+     <!-- This Recent Opportunities was getting redundant
+	  from the Dealership Page which already shows all
+	  of the opportunities so we all agreed to keep it there
+	  while the mainpage's purpose was to show off the CSS
+        
+        <apex:pageBlock title="Opportunity Details">
+    <apex:pageBlockSection >
+        <apex:outputField value="{! Opportunity.Name }"/>
+        <apex:outputField value="{! Opportunity.AccountId }"/>
+        <apex:outputField value="{! Opportunity.Amount }"/>
+        <apex:outputField value="{! Opportunity.StageName }"/>
+    </apex:pageBlockSection>
+</apex:pageBlock>
+        
+        </apex:pageBlock>
+        
+        
+            <apex:pageBlock title="Upcoming Opportunities">
+   <apex:pageBlockTable value="{! Opportunity}" var="opp">
+      <apex:column value="{! opp.Name}"/>
+      <apex:column value="{! opp.AccountId}"/>
+      <apex:column value="{! opp.Amount}"/>
+      <apex:column value="{! opp.CloseDate}"/>
+      <apex:column value="{! opp.StageName}"/>
+
+       
+       </apex:pageBlockTable>
+   -->
+    </apex:pageBlock>
+
+</apex:page>

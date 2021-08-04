@@ -9,6 +9,10 @@ public with sharing class DealershipController {
     public List<Wrap> wrappedDealers {get;set;}
     
     
+    
+    // constructor for the controller
+    // Getting dealerships and adding them to wrapper class
+    // Establishing firt dealer as currentDealer
     public DealershipController() {
         
         try {
@@ -18,6 +22,13 @@ public with sharing class DealershipController {
             system.debug(e);
         }
         
+        Dealership__c firstDealer = dealerships[0];
+        currentDealerName = firstDealer.Name;
+        changeDealer();
+        
+        
+        
+        // Adding list of dealers to the wrapper class
         wrappedDealers = new List<Wrap>();
         for(Dealership__c d : dealerships) {
             wrappedDealers.add(new Wrap(d));
@@ -30,7 +41,7 @@ public with sharing class DealershipController {
     // The link(commandlink) changes the value of currentDealerName
     // This method queries for the open opportunites that are assocaited with the specific dealership (currentDealerName)
 	public  void changeDealer() {
-    	currentDealerOpportunities = [SELECT Name, Amount, CloseDate,StageName  FROM Opportunity WHERE (Opportunity.Dealership__r.Name = :currentDealerName AND StageName != 'Closed')];
+    	currentDealerOpportunities = [SELECT Name, Product_Total__c, CloseDate,StageName  FROM Opportunity WHERE (Opportunity.Dealership__r.Name = :currentDealerName AND StageName != 'Closed Won' AND StageName != 'Closed Lost')];
 	}
     
     
@@ -47,8 +58,8 @@ public with sharing class DealershipController {
          public Wrap(Dealership__c d) {
            wrappedDealer = d;
              try{
-                topOpp = [SELECT Name, Amount FROM Opportunity WHERE (Opportunity.Dealership__r.ID = :d.Id AND StageName != 'Closed' )
-                      ORDER BY Amount DESC LIMIT 1][0];
+                topOpp = [SELECT Name, Product_Total__c FROM Opportunity WHERE (Opportunity.Dealership__r.ID = :d.Id AND StageName != 'Closed Won' AND StageName != 'Closed Lost' )
+                      ORDER BY Product_Total__c DESC LIMIT 1][0];
              } 
              catch(Exception e) {
                  system.debug(e);

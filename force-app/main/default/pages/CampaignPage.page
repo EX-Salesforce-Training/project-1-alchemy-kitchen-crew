@@ -1,0 +1,119 @@
+<apex:page standardController="Campaign" extensions="campaignControllerExtension,NavigationExtension" id="thePage" standardStylesheets="true" >
+	<style>
+    
+        .bPageBlock{
+       background: #B0E0E6 !important ;
+       opacity: 80%;
+          }
+         .column:hover {
+             colour: black;
+         }
+
+        .column {
+         background-color: blanchedalmond;
+         }
+
+          .newheader {
+         font-size:300%;
+         font-weight:bold;
+         text-align:center;
+         }
+        
+         body {
+    		background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/da705069-91b5-41cb-86f3-86a585c6fdf3/bvlatuR/std/2880x1800/MX-Hero-Desktop.jpg) !important;
+        	background-position: 50% 50% !important;
+    		background-size : auto auto !important;
+    		background-attachment : scroll !important;
+    		background-repeat : no-repeat !important;
+        	overflow :hidden !important;
+         }
+    </style>               
+
+    
+ 		<apex:form styleClass="DealerForm" > 
+            <apex:pageBlock > 
+                	 <apex:image url="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
+                            style="max-width:100px;max-height:100px;" />
+                <br/>
+                <br/>
+                     <apex:commandButton action="{!Homep}" value="Home" />
+                     <apex:commandButton action="{!Dealerp}" value="Dealership" /> 
+                     <apex:commandButton action="{!Pricep}" value="Pricebook Entry" />
+                	 <apex:commandButton action="{!Campep}" value="Campaign Page" />
+            </apex:pageBlock>
+   		</apex:form>	
+    
+        <apex:pageBlock title="Campaigns">    
+    <apex:pageBlockSection title="Campaigns"> 
+        <apex:form >
+    <apex:pageBlockTable value="{!campaigns}" var="campaign" id="theTable"  styleClass="slds-table slds-table_bordered"
+        rowClasses="odd,even" style="blue" >
+        
+     
+        
+          
+        <apex:facet name="header">Campaign List</apex:facet>
+       
+
+        <apex:column >
+            <apex:facet name="header">Name</apex:facet>
+        
+            <apex:outputText value="{!campaign.name}" />
+         
+
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">Status</apex:facet>
+            <apex:outputField value="{!campaign.status}" >
+                <apex:inlineEditSupport event="ondblClick" /> 
+            </apex:outputField>
+      	  </apex:column>
+        
+         <apex:column >
+            <apex:facet name="header">Number Of Responses</apex:facet>
+            <apex:outputField value="{!campaign.NumberOfResponses}" >
+                <apex:inlineEditSupport event="ondblClick" /> 
+            </apex:outputField>
+      	  </apex:column>
+        
+        
+        <apex:column >
+            <apex:facet name="header">Expected revenue</apex:facet>
+            <apex:outputField value="{!campaign.ExpectedRevenue}" >
+                <apex:inlineEditSupport event="ondblClick" /> 
+            </apex:outputField>
+      	  </apex:column>
+   		 </apex:pageBlockTable>
+        </apex:form>
+       
+            </apex:pageBlockSection>
+            
+          
+    
+<apex:pageBlockSection title="Create a new Campaign">
+      <apex:form styleClass="fsWrapper" >
+        <apex:pageBlock mode="edit">
+            <apex:pageMessages />
+            <apex:pageBlockSection >
+                <apex:inputField value="{!campaign.name}"/>
+            </apex:pageBlockSection>
+            
+                <apex:pageBlockSection >
+                <apex:inputField value="{!campaign.status}"/>
+            </apex:pageBlockSection>
+            
+                <apex:pageBlockSection >
+                <apex:inputField value="{!campaign.ExpectedRevenue}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+               
+              <apex:commandButton action="{!save}" value="Submit"/>
+           </apex:pageBlockButtons>
+        
+        </apex:pageBlock>
+         
+    </apex:form>
+</apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

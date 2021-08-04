@@ -1,12 +1,23 @@
-<apex:page controller="DealershipController" lightningStylesheets="true">
+<apex:page controller="DealershipController" extensions="NavigationExtension" lightningStylesheets="true">
     <apex:slds />
      <style type="text/css">
           .bPageBlock{
-       background: #B0E0E6 !important ;
+       	background: #B0E0E6 !important ;
+         border-top: 4px solid #c9c91e !important ;
         }
          .column:hover {
             colour: black;
          }
+         
+          h1 {
+        	background-color:rgba(0, 0, 0, 0) !important;
+        	text-align:center !important;
+        	font-size:3.5rem !important;
+        	font-weight:bold !important;
+        	color: black !important;
+        	filter: drop-shadow(0 0 0.75rem black) !important;
+         }
+         
          
         .column {
          background-color: blanchedalmond;
@@ -17,16 +28,42 @@
          font-weight:bold;
          text-align:center;
          }
-        
+         
+         body {
+    		background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/da705069-91b5-41cb-86f3-86a585c6fdf3/bvlatuR/std/2880x1800/MX-Hero-Desktop.jpg) !important;
+        	background-position: 50% 50% !important;
+    		background-size : auto auto !important;
+    		background-attachment : scroll !important;
+    		background-repeat : no-repeat !important;
+        	overflow :hidden !important;
+         }
+         
+         .DealerForm { 
+         	opacity: 0.80 !important;
+         }        
     </style >
-    <apex:form styleClass="DealerForm" >
+		
+           
+        <apex:form styleClass="DealerForm" > 
+        
+        <apex:pageBlock >
+           		<apex:image url="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
+                            style="max-width:100px;max-height:100px;" />
+                <br/>
+                <br/>
+                 <apex:commandButton action="{!Homep}" value="Home" />
+                 <apex:commandButton action="{!Dealerp}" value="Dealership" /> 
+                 <apex:commandButton action="{!Pricep}" value="Pricebook Entry" />
+            	 <apex:commandButton action="{!Campep}" value="Campaign Page" />
+        </apex:pageBlock>
+        
         <apex:pageBlock mode="maindetail">
             
             <!-- Header for the Table -->
             
             <div class="newheader">            
                 <h1 >
-                    Dealerships and Top Opportunity
+                    Dealerships and Top Open Opportunity
                 </h1>
             </div>
             
@@ -49,10 +86,9 @@
                     <apex:column headerValue="Top Opportunity Name" styleClass="column">
                         <apex:outputField value="{!wrapped.topOpp.Name}" />
                     </apex:column>
-                    <apex:column headerValue="Top Opportunity Amount"  styleClass="column">
-                        <apex:outputField value="{!wrapped.topOpp.Amount}" />
+                    <apex:column headerValue="Top Opportunity Product Total"  styleClass="column">
+                        <apex:outputField value="{!wrapped.topOpp.Product_Total__c}" />
                     </apex:column>
-                    <apex:outputField />
                 </apex:pageBlockTable>
             
         </apex:pageBlock> 
@@ -63,10 +99,12 @@
                
                     <apex:pageBlockTable value="{!currentDealerOpportunities}" var="opp" styleClass="table" >
                         <apex:column headerValue="Opportunity Name" styleClass="column" >
-                            <apex:outputField value="{!opp.Name}" />
+                            <apex:outputLink value="/{!opp.id}" target="_blank" >
+                            	{!opp.Name}
+                            </apex:outputLink>
                         </apex:column>
-                        <apex:column headerValue="Opportunity Amount" styleClass="column">
-                            <apex:outputField value="{!opp.Amount}" />
+                        <apex:column headerValue="Opportunity Product Total" styleClass="column">
+                            <apex:outputField value="{!opp.Product_Total__c}" />
                         </apex:column>
                         <apex:column headerValue="Opportunity Close Date" styleClass="column">
                             <apex:outputField value="{!opp.CloseDate}" />
@@ -79,4 +117,16 @@
             </apex:pageBlock>
         </div>
     </apex:form>
+     <!-- Add Navigation Buttons -->
+    <apex:form >
+		 <apex:pageBlock >
+                
+                 <apex:commandButton action="{!Homep}" value="Home" />
+                 <apex:commandButton action="{!Dealerp}" value="Dealership" /> 
+                 <apex:commandButton action="{!Pricep}" value="Pricebook Entry" />
+                 
+       
+      	 </apex:pageBlock>
+            
+    </apex:form>  
 </apex:page>
