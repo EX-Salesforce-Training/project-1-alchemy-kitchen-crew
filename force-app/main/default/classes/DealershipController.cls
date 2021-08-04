@@ -1,3 +1,10 @@
+/*
+Title: DealershipController
+Author: Milan Winter
+Description: Controller for the Dealership VisualForce Page. Querying for the dealerships and the opportunites related to them.
+Additional Logic to display and handle clicks are in here as well.
+*/
+
 public with sharing class DealershipController {
     
     public List<Opportunity> currentDealerOpportunities {get;set;}
