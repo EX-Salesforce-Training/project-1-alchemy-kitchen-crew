@@ -37,6 +37,10 @@
                 <behavior>Edit</behavior>
                 <field>Dealership__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Product_Total__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
