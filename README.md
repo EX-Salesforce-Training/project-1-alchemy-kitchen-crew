@@ -54,5 +54,5 @@
 
 ## CSS For VisualForce Pages
 * Salesforce Lightning Design System (SLDS) components for uniform styling.
-* Apex Asset components for dynamic, sortable columns.# Salesforce DX Project: Next Steps
+* Apex Asset components for dynamic, sortable columns.
 
