@@ -1,6 +1,18 @@
+<!-- 
+Title: Campaign
+Author: Rafael Loustanau
+Description: Campaign VisualForce Page displaying all the current campaigns and a form for creating
+a new one.
+LastUpdated: 8/3/21
+--> 
+
+
+
+
+
 <apex:page standardController="Campaign" extensions="campaignControllerExtension,NavigationExtension" id="thePage" standardStylesheets="true" >
+
 	<style>
-    
         .bPageBlock{
        background: #B0E0E6 !important ;
        opacity: 80%;
@@ -31,6 +43,7 @@
 
     
  		<apex:form styleClass="DealerForm" > 
+		<!-- Displaying the Tesla Logo and Navigation Buttons below -->
             <apex:pageBlock > 
                 	 <apex:image url="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg"
                             style="max-width:100px;max-height:100px;" />
@@ -43,6 +56,7 @@
             </apex:pageBlock>
    		</apex:form>	
     
+    <!-- Displaying the Campaigns Table below -->
         <apex:pageBlock title="Campaigns">    
     <apex:pageBlockSection title="Campaigns"> 
         <apex:form >
@@ -90,7 +104,7 @@
             </apex:pageBlockSection>
             
           
-    
+    <!-- Creating New Campaing Form -->
 <apex:pageBlockSection title="Create a new Campaign">
       <apex:form styleClass="fsWrapper" >
         <apex:pageBlock mode="edit">
